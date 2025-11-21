@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Books (Console)</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+  $.getJSON("book_collection.json", function(data) {
+
+      console.log("Title of first book:", data.books[0].title);
+
+      console.log("Author of second book:", data.books[1].author);
+
+      console.log("Genres of all books:");
+      data.books.forEach(function(book) {
+          console.log(book.genres);
+      });
+
+  });
+</script>
+
+</body>
+</html>
